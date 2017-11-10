@@ -16,6 +16,9 @@
     <h1>Ontvangen contactformuliergegevens</h1>
 </head>
 <body>
+    
+    
+    
     <label>Naam:</label>
     <?php echo$_POST["naam"]; ?><br>
     <label>E-mail:</label>
@@ -29,8 +32,24 @@
     <label>Bericht:</label>
     <?php echo $_POST["textfield"]; ?><br>
 
-    
-
+    <?php
+    $newline = PHP_EOL;
+    $file = fopen('welkom.txt', 'a');
+    fwrite($file, $newline);
+    fwrite($file, $_POST["naam"]);
+    fwrite($file, $newline);
+    fwrite($file, $_POST["e-mail"]);
+    fwrite($file, $newline);
+    fwrite($file, $_POST["geslacht"]);
+    fwrite($file, $newline);
+    fwrite($file, $_POST["telefoon"]);
+    fwrite($file, $newline);
+    fwrite($file, $_POST["website"]);
+    fwrite($file, $newline);
+    fwrite($file, $_POST["textfield"]);
+    fwrite($file, $newline);
+    fclose($file);
+    ?>
 </body>
 </html>
 
