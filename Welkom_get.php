@@ -1,7 +1,10 @@
 <html>
     <head>  
         <style>
+            button{
+                background-color: pink
 
+            }
             body{
 
                 background-color: lightpink
@@ -12,13 +15,19 @@
                 text-align: left;
             }
         </style>
+        <<script>
+            function show_content() {
+                document.getElementById('hidden_content').style.display = 'table-caption';
+            }
+
+        </script>
         <title>Verzonden</title>
     <h1>Ontvangen contactformuliergegevens</h1>
 </head>
 <body>
-    
-    
-    
+
+
+
     <label>Naam:</label>
     <?php echo$_POST["naam"]; ?><br>
     <label>E-mail:</label>
@@ -30,9 +39,21 @@
     <label>Website:</label>
     <?php echo $_POST["website"]; ?><br>
     <label>Bericht:</label>
-    <?php echo $_POST["textfield"]; ?><br>
+    <?php echo $_POST["textfield"]; ?><br><br><br>
+    <a href="#" onclick="show_content()">Open file, zoeken is (ctrl+F)</a> 
+
+
+
 
     <?php
+    $myFile = "welkom.txt";
+    $fh = fopen($myFile, 'r');
+    $theData = fread($fh, filesize($myFile));
+    fclose($fh);
+    echo '<div id="hidden_content" style="display:none">' . $theData . '</div>';
+
+
+
     $newline = PHP_EOL;
     $file = fopen('welkom.txt', 'a');
     fwrite($file, $newline);
