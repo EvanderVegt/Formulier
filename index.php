@@ -37,18 +37,18 @@ and open the template in the editor.
         <br><br>
         <p>
             <label for="1">Naam:</label>
-            <input type="text" id="1" name="naam"><br><br>
+            <input type="text" id="1" name="naam" placeholder="Naam"><br><br>
             <label for="1">E-mail:</label>
-            <input type="text" id="1" name="adres"><br><br>
+            <input type="text" id="1" name="e-mail" placeholder="E-mailadres"><br><br>
             <label for="1">Geslacht:</label>
             <select id ="1" name="geslacht">
                 <option value="Man">Man</option>
                 <option value="Vrouw">Vrouw</option>
             </select><br><br><br><br>
             <label for="1">Telefoon:</label>
-            <input type="text" id ="1" name="telefoon" maxlength="10" size="7"><br><br>
+            <input type="text" id ="1" name="telefoon" placeholder="Telnr." maxlength="10" size="7"><br><br>
             <label for="1">Website:</label>
-            <input type="text" id ="1" name="website"><br><br>
+            <input type="text" id ="1" name="website" value="http://"><br><br>
             <label for="1">Bericht:</label>
             <textarea name="textfield" id="1" cols="50" rows="3" style="width: 300px; height: 50px;"></textarea><br><br>
             <label for="1">Bericht:</label>
